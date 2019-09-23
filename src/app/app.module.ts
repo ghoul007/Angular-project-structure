@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { AppInitializationModule } from './app-initialization.module';
 import { CoreModule } from './core/core.module';
 import { HttpClientModule } from '@angular/common/http';
+import { LayoutModule } from './layout/layout.module';
+import { SharedModule } from './shared/shared.module';
+import { ViewsModule } from './views/views.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     AppInitializationModule,
     HttpClientModule,
-    CoreModule
+    CoreModule,
+    LayoutModule,
+    SharedModule,
+    ViewsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
