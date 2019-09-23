@@ -47,6 +47,12 @@ export class FakeBackend implements HttpInterceptor {
         });
       }
 
+            // authenticate - public
+      if (request.url.endsWith('/users') && request.method === 'GET') {
+
+        return ok({body: users});
+      }
+
       // pass through any requests not handled above
       return next.handle(request);
     }))
