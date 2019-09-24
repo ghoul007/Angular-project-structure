@@ -8,6 +8,45 @@ Folder structure options and naming conventions for software projects
 ## A directory layout
 
 ```bash
+├── app-initialization.module.ts
+├── app-routing.module.ts
+├── app.component.html
+├── app.component.scss
+├── app.component.spec.ts
+├── app.component.ts
+├── app.config.ts
+├── app.constant.ts
+├── app.module.ts
+├── core
+├── features
+├── layout
+├── shared
+├── styles
+└── views
+```
+
+### CORE MODULE
+Core module is dedicated to singleton providers
+These services contain business logic used by other core services or app’s features.
+
+### FEATURE MODULE
+Contain different feature modules
+
+### LAYOUT MODULE
+These components are usually rendered in the UI at all times and are often included directly into root AppComponent
+
+### SHARED MODULE
+SharedModule is a place to store all the reusable  components, directives, pipes, helpers and types
+
+
+### VIEW MODULE
+Views module is another module that usually turns out to be quite simple. It holds the views that are not a part of any feature and whose routing paths are defined in AppRoutingModule. An example of such a view is a 404 page (PageNotFoundView)
+
+
+## Project Structure
+
+
+```bash
 ├── app
 |  ├── app-initialization.module.ts
 |  ├── app-routing.module.ts
@@ -117,3 +156,6 @@ Folder structure options and naming conventions for software projects
 ├── styles.scss
 └── test.ts
 ```
+
+
+
