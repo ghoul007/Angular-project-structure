@@ -1,27 +1,119 @@
-# Structure
+# Angular Project Structure
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.5.
+###
+Folder structure options and naming conventions for software projects
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## A directory layout
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```bash
+├── app
+|  ├── app-initialization.module.ts
+|  ├── app-routing.module.ts
+|  ├── app.component.html
+|  ├── app.component.scss
+|  ├── app.component.spec.ts
+|  ├── app.component.ts
+|  ├── app.config.ts
+|  ├── app.constant.ts
+|  ├── app.module.ts
+|  ├── core
+|  |  ├── auth
+|  |  |  ├── auth.module.ts
+|  |  |  ├── guards
+|  |  |  ├── helpers
+|  |  |  |  ├── auth-interceptor.ts
+|  |  |  |  ├── error-interceptor.ts
+|  |  |  |  ├── fake-backend.ts
+|  |  |  |  └── jwt-interceptor.ts
+|  |  |  ├── services
+|  |  |  └── types
+|  |  └── core.module.ts
+|  ├── features
+|  |  └── feature-example
+|  |     ├── components
+|  |     |  └── component-example
+|  |     |     └── README.md
+|  |     ├── containers
+|  |     |  └── container-example
+|  |     |     └── README.md
+|  |     ├── feature-example-routing.module.ts
+|  |     ├── feature-example.config.ts
+|  |     ├── feature-example.constants.ts
+|  |     ├── feature-example.module.ts
+|  |     ├── helpers
+|  |     |  └── example.helpers.ts
+|  |     ├── services
+|  |     |  └── example.service.ts
+|  |     ├── store
+|  |     |  ├── feature-example.actions.ts
+|  |     |  ├── feature-example.effects.ts
+|  |     |  ├── feature-example.reducers.ts
+|  |     |  ├── feature-example.selectors.ts
+|  |     |  └── index.ts
+|  |     ├── types
+|  |     |  └── example.ts
+|  |     └── views
+|  |        └── view-example
+|  |           └── README.md
+|  ├── layout
+|  |  ├── footer
+|  |  ├── header
+|  |  |  ├── header.component.html
+|  |  |  ├── header.component.scss
+|  |  |  └── header.component.ts
+|  |  ├── layout.module.ts
+|  |  └── nav
+|  |     ├── nav.component.html
+|  |     ├── nav.component.scss
+|  |     └── nav.component.ts
+|  ├── shared
+|  |  ├── components
+|  |  |  ├── complex-component-example
+|  |  |  |  ├── complex.component.html
+|  |  |  |  ├── complex.component.scss
+|  |  |  |  ├── complex.component.ts
+|  |  |  |  ├── complex.module.ts
+|  |  |  |  ├── components
+|  |  |  |  |  ├── example-type.ts
+|  |  |  |  |  ├── sub.component.html
+|  |  |  |  |  ├── sub.component.scss
+|  |  |  |  |  └── sub.component.ts
+|  |  |  |  └── types
+|  |  |  |     └── type-example.ts
+|  |  |  └── simple-component-example
+|  |  |     ├── example-type.ts
+|  |  |     ├── simple.component.html
+|  |  |     ├── simple.component.scss
+|  |  |     └── simple.component.ts
+|  |  ├── directives
+|  |  |  └── directive-example.directive.ts
+|  |  ├── helpers
+|  |  |  └── helpers-example.helpers.ts
+|  |  ├── pipes
+|  |  |  └── pipe-example.pipe.ts
+|  |  ├── shared.module.ts
+|  |  └── types
+|  |     └── type-example.ts
+|  ├── styles
+|  |  ├── base.scss
+|  |  ├── reset.scss
+|  |  └── variables.scss
+|  └── views
+|     ├── page-not-found
+|     |  ├── page-not-found.view.html
+|     |  ├── page-not-found.view.scss
+|     |  └── page-not-found.view.ts
+|     └── views.module.ts
+├── assets
+├── environments
+|  ├── environment.prod.ts
+|  └── environment.ts
+├── favicon.ico
+├── index.html
+├── main.ts
+├── polyfills.ts
+├── styles.scss
+└── test.ts
+```

@@ -21,6 +21,7 @@
     "@angular/platform-browser-dynamic": "~8.2.7",
     "@angular/router": "~8.2.7",
     "rxjs": "~6.4.0",
+    "tree-cli": "^0.5.3",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
   },
