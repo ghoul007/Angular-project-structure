@@ -1,5 +1,4 @@
 import { NgModule, APP_INITIALIZER } from '@angular/core';
-
 // functions should always return a function. The initialization process will wait for this to finish before
 // it continues.
 export function init_app() {

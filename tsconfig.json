@@ -1,11 +1,13 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": "./src",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
+        "noImplicitAny": false,
+    "suppressImplicitAnyIndexErrors": true,
     "experimentalDecorators": true,
     "module": "esnext",
     "moduleResolution": "node",
@@ -14,6 +16,15 @@
     "typeRoots": [
       "node_modules/@types"
     ],
+    //https://scotch.io/tutorials/reference-angular-imports-absolutely-for-easier-development#toc-setting-up-absolute-paths
+    "paths": {
+      "@app/*": [
+        "app/*"
+      ],
+      "@env/*": [
+        "environments/*"
+      ]
+    },
     "lib": [
       "es2018",
       "dom"
@@ -24,3 +35,4 @@
     "strictInjectionParameters": true
   }
 }
+
