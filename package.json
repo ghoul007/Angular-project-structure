@@ -12,7 +12,7 @@
     "prettier": "prettier --single-quote --traillin-comma es5 --write ",
     "pretty-quick": "npx pretty-quick --pattern ",
     "pretty-stage": "pretty-quick --staged",
-    "precommit": "npm run commitlint && npm run pretty-stage && npm test",
+    "precommit": "npm run commitlint && npm run pretty-stage",
     "commitlint": "commitlint -e",
     "postinstall": "node ./node_modules/husky/lib/installer/bin install"
   },
@@ -58,16 +58,5 @@
     "tslint-angular": "^3.0.2",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "~3.5.3"
-  },
-  "lint-staged": {
-    "src/**/*.ts": [
-      "ng lint --fix",
-      "git add"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run pretty-stage && ng lint"
-    }
   }
 }
