@@ -1,12 +1,12 @@
-import { NgModule, Optional, SkipSelf } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { HTTP_INTERCEPTORS, HttpBackend, HttpClientModule } from '@angular/common/http';
-import { JwtInterceptor } from './auth/helpers/jwt-interceptor';
+import { NgModule, Optional, SkipSelf } from '@angular/core';
+import { LayoutModule } from '../layout/layout.module';
+import { AuthModule } from './auth/auth.module';
+import { AuthInterceptorService } from './auth/helpers/auth-interceptor';
 import { ErrorInterceptor } from './auth/helpers/error-interceptor';
 import { FakeBackend } from './auth/helpers/fake-backend';
-import { AuthInterceptorService } from './auth/helpers/auth-interceptor';
-import { CommonModule } from '@angular/common';
-import { AuthModule } from './auth/auth.module';
-import { LayoutModule } from '../layout/layout.module';
+import { JwtInterceptor } from './auth/helpers/jwt-interceptor';
 
 @NgModule({
   declarations: [],

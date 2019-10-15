@@ -13,7 +13,8 @@
     "pretty-quick": "npx pretty-quick --pattern ",
     "pretty-stage": "pretty-quick --staged",
     "precommit": "npm run commitlint && npm run pretty-stage && npm test",
-    "commitlint": "commitlint -e"
+    "commitlint": "commitlint -e",
+    "postinstall": "node ./node_modules/husky/lib/installer/bin install"
   },
   "private": true,
   "dependencies": {
@@ -66,8 +67,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run pretty-quick --staged && ng lint && ng test --watch=false",
-      "pre-push": "ng build --aot true"
+      "pre-commit": "npm run pretty-stage && ng lint"
     }
   }
 }

@@ -1,40 +1,20 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { SimpleComponent } from './components/simple-component-example/simple.component';
 import { ComplexModule } from './components/complex-component-example/complex.module';
+import { SimpleComponent } from './components/simple-component-example/simple.component';
 
-const EXPORT_COMPONENTS = [
-  SimpleComponent
-];
+const EXPORT_COMPONENTS = [SimpleComponent];
 
-const PIPES = [
+const PIPES = [];
 
-];
-
-const MODULES = [
-  ComplexModule
-];
-
+const MODULES = [ComplexModule];
 
 @NgModule({
-  declarations: [
-    ...EXPORT_COMPONENTS, ...PIPES
-  ],
-  imports: [
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
-    ...MODULES
-  ],
-  exports: [
-    ...EXPORT_COMPONENTS, ...PIPES
-  ],
-  entryComponents: [
-
-  ],
-  providers: [
-
-  ]
+  declarations: [...EXPORT_COMPONENTS, ...PIPES],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, ...MODULES],
+  exports: [...EXPORT_COMPONENTS, ...PIPES],
+  entryComponents: [],
+  providers: [],
 })
-export class SharedModule { }
+export class SharedModule {}
