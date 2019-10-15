@@ -16,18 +16,16 @@ import { LayoutModule } from '../layout/layout.module';
     { provide: HTTP_INTERCEPTORS, useClass: FakeBackend, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorService, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
-  ]
+  ],
 })
 export class CoreModule {
-      constructor(
-        @Optional()
-        @SkipSelf()
-        parentModule: CoreModule
-    ) {
-        if (parentModule) {
-            throw new Error(
-                'CoreModule is already loaded. Import it in the AppModule only.'
-            );
-        }
+  constructor(
+    @Optional()
+    @SkipSelf()
+    parentModule: CoreModule
+  ) {
+    if (parentModule) {
+      throw new Error('CoreModule is already loaded. Import it in the AppModule only.');
     }
- }
+  }
+}
