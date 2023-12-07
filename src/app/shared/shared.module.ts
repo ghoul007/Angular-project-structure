@@ -14,7 +14,6 @@ const MODULES = [ComplexModule];
   declarations: [...EXPORT_COMPONENTS, ...PIPES],
   imports: [CommonModule, FormsModule, ReactiveFormsModule, ...MODULES],
   exports: [...EXPORT_COMPONENTS, ...PIPES],
-  entryComponents: [],
   providers: [],
 })
 export class SharedModule {}
